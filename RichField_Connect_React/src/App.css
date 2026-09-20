@@ -20,21 +20,20 @@ body {
 }
 
 /* ==========================================
-   2. PAGE LAYOUT (FULL SCREEN FLEXBOX)
+   2. PAGE LAYOUT (FULL SCREEN EDGE-TO-EDGE)
    ========================================== */
 /* Keeps the navbar at top and pushes footer to the bottom */
 .app-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100%;
 }
 
-/* Main page area between navbar and footer */
+/* Main page area stretches 100% full width */
 .main-content {
   flex: 1;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 20px 32px;
   width: 100%;
 }
 
@@ -45,11 +44,11 @@ body {
   background-color: var(--richfield-blue);
   padding: 16px 32px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 .navbar-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -101,6 +100,7 @@ body {
   text-align: center;
   padding: 24px 16px;
   margin-top: auto; /* Pushes footer to the very bottom */
+  width: 100%;
 }
 
 .footer-subtext {
@@ -117,6 +117,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
+  width: 100%;
 }
 
 /* Blue glow effect when clicking inside an input box */
@@ -178,7 +179,6 @@ input:focus, textarea:focus, select:focus {
 /* ==========================================
    7. ANIMATIONS
    ========================================== */
-/* Smooth entrance animation when a post is created */
 .fade-in {
   animation: fadeIn 0.4s ease-in-out;
 }
@@ -206,7 +206,7 @@ input:focus, textarea:focus, select:focus {
 
 /* On mobile phones, reduce main content padding */
 @media (max-width: 767px) {
-  .main-content {
-    padding: 10px;
+  .main-content, .navbar-header {
+    padding: 12px 16px;
   }
 }

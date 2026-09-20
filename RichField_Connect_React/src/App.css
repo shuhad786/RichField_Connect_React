@@ -1,5 +1,5 @@
 /* ==========================================
-   1. GLOBAL VARIABLES & BASE STYLES
+   1. GLOBAL RESET & BASE STYLES
    ========================================== */
 :root {
   --richfield-blue: #003087; /* Main institutional color */
@@ -8,12 +8,20 @@
   --white: #ffffff;
 }
 
+/* Kills browser default margins/padding and removes side gaps */
+html, body, #root {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
   font-family: 'Times New Roman', Times, serif;
   background-color: var(--bg-light);
   color: var(--text-dark);
@@ -22,7 +30,6 @@ body {
 /* ==========================================
    2. PAGE LAYOUT (FULL SCREEN EDGE-TO-EDGE)
    ========================================== */
-/* Keeps the navbar at top and pushes footer to the bottom */
 .app-container {
   display: flex;
   flex-direction: column;
@@ -30,7 +37,6 @@ body {
   width: 100%;
 }
 
-/* Main page area stretches 100% full width */
 .main-content {
   flex: 1;
   padding: 20px 32px;
@@ -112,7 +118,6 @@ body {
 /* ==========================================
    5. FORMS & INPUTS
    ========================================== */
-/* 2-column layout for registration form and preview card */
 .signup-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -197,14 +202,12 @@ input:focus, textarea:focus, select:focus {
 /* ==========================================
    8. RESPONSIVE DESIGN (MEDIA QUERIES)
    ========================================== */
-/* On tablets and smaller screens, stack the 2 columns vertically */
 @media (max-width: 1023px) {
   .signup-layout {
     grid-template-columns: 1fr;
   }
 }
 
-/* On mobile phones, reduce main content padding */
 @media (max-width: 767px) {
   .main-content, .navbar-header {
     padding: 12px 16px;

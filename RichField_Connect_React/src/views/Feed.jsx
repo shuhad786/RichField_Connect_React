@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
-import CreatePost from '../components/Post';
+import CreatePost from '../components/CreatePost';
 import Post from '../components/Post';
 
 export default function Feed() {
